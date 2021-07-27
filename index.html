@@ -100,9 +100,9 @@
 
         // Add links
         leaf
-          .append("a")
-          .attr("xlink:href", (d) => d.data.url)
           .append("circle")
+          .attr("data-url", (d) => d.data.url)
+          .attr("class", "link")
           .attr("id", (d) => Math.random())
           .attr("r", (d) => d.r)
           .attr("fill-opacity", 0.9)
